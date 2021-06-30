@@ -1,0 +1,50 @@
+MOVIE_TYPES = [
+    {"title": "传记", "type": "2", "interval_id": "100:90", "icon": "bio"},
+    {"title": "犯罪", "type": "3", "interval_id": "100:90", "icon": "pistol"},
+    {"title": "纪录片", "type": "1", "interval_id": "100:90", "icon": "filmstrip"},
+    {"title": "历史", "type": "4", "interval_id": "100:90", "icon": "history"},
+    {"title": "动作", "type": "5", "interval_id": "100:90", "icon": "kabaddi"},
+    {"title": "情色", "type": "6", "interval_id": "100:90", "icon": "hand-heart"},
+    {"title": "歌舞", "type": "7", "interval_id": "100:90", "icon": "guitar-acoustic"},
+    {"title": "儿童", "type": "8", "interval_id": "100:90", "icon": "baby-face"},
+    {"title": "悬疑", "type": "10", "interval_id": "100:90", "icon": "head-question"},
+    {"title": "剧情", "type": "11", "interval_id": "100:90", "icon": "movie-roll"},
+    {"title": "灾难", "type": "12", "interval_id": "100:90", "icon": "ferry"},
+    {"title": "爱情", "type": "13", "interval_id": "100:90", "icon": "account-heart"},
+    {"title": "音乐", "type": "14", "interval_id": "100:90", "icon": "music-clef-treble"},
+    {"title": "冒险", "type": "15", "interval_id": "100:90", "icon": "image-filter-hdr"},
+    {"title": "奇幻", "type": "16", "interval_id": "100:90", "icon": "chemical-weapon"},
+    {"title": "科幻", "type": "17", "interval_id": "100:90", "icon": "rocket"},
+    {"title": "运动", "type": "18", "interval_id": "100:90", "icon": "basketball"},
+    {"title": "惊悚", "type": "19", "interval_id": "100:90", "icon": "hand-saw"},
+    {
+        "title": "恐怖",
+        "type": "20",
+        "interval_id": "100:90",
+        "icon": "bottle-tonic-skull",
+    },
+    {"title": "战争", "type": "22", "interval_id": "100:90", "icon": "seal"},
+    {"title": "短片", "type": "23", "interval_id": "100:90", "icon": "video-vintage"},
+    {"title": "喜剧", "type": "24", "interval_id": "100:90", "icon": "emoticon-lol"},
+    {"title": "动画", "type": "25", "interval_id": "100:90", "icon": "drama-masks"},
+    {"title": "同性", "type": "26", "interval_id": "100:90", "icon": "account-multiple"},
+    {
+        "title": "西部",
+        "type": "27",
+        "interval_id": "100:90",
+        "icon": "horseshoe",
+    },
+    {"title": "家庭", "type": "28", "interval_id": "100:90", "icon": "home-heart"},
+    {"title": "武侠", "type": "29", "interval_id": "100:90", "icon": "sword"},
+    {"title": "古装", "type": "30", "interval_id": "100:90", "icon": "castle"},
+    {
+        "title": "黑色电影",
+        "type": "31",
+        "interval_id": "100:90",
+        "icon": "projector-screen",
+    },
+]
+
+END_POINT = """
+https://movie.douban.com/j/chart/top_list?type=3&interval_id=100%3A90&action=&start=0&limit=5
+"""

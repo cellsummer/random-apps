@@ -1,0 +1,98 @@
+BoxLayout:
+    bg: app.theme_cls.bg_light
+    orientation: 'vertical'
+    
+    MDToolbar:
+        title: 'WeChat'
+        elevation: 20
+        halign: 'center'
+        right_action_items: [["magnify", lambda x: print('search')],['plus-circle-outline', lambda x: print('plus')]]
+        md_bg_color: app.theme_cls.accent_color
+        theme_text_color: 'Custom'
+        specific_text_color: [1,1,1,1]
+
+    MDBottomNavigation:
+        panel_color: app.theme_cls.accent_color
+        BottomNavChat:
+            name: "chats"
+            # icon: 'chat'
+            ScrollView:
+               
+                MDList:
+                    id: 'chats-view'
+                    theme_text_color: 'Custom'
+                    md_bg_color: app.theme_cls.accent_color
+                    TwoLineAvatarListItem:
+                        text: "Kevin Garry"
+                        secondary_text: "Secondary text here"
+
+                        ImageLeftWidget:
+                            # source: "C:\\Users\\cells\\Documents\\Github\\excel-games\\myapps\\wechat\\data\\logo\\man.jfif"
+                            source: 'data/logo/man.jfif'
+                    
+                    TwoLineAvatarListItem:
+                        text: "Garry Calvin"
+                        secondary_text: "Secondary text here"
+
+                        ImageLeftWidget:
+                            # source: "C:\\Users\\cells\\Documents\\Github\\excel-games\\myapps\\wechat\\data\\logo\\man.jfif"
+                            source: 'data/logo/man-2.jfif'
+                    TwoLineAvatarListItem:
+                        text: "Garry Calvin"
+                        secondary_text: "Secondary text here"
+
+                        ImageLeftWidget:
+                            # source: "C:\\Users\\cells\\Documents\\Github\\excel-games\\myapps\\wechat\\data\\logo\\man.jfif"
+                            source: 'data/logo/man-2.jfif'
+                    TwoLineAvatarListItem:
+                        text: "Garry Calvin"
+                        secondary_text: "Secondary text here"
+
+                        ImageLeftWidget:
+                            # source: "C:\\Users\\cells\\Documents\\Github\\excel-games\\myapps\\wechat\\data\\logo\\man.jfif"
+                            source: 'data/logo/man-2.jfif'
+
+                    TwoLineAvatarListItem:
+                        text: "Garry Calvin"
+                        secondary_text: "Secondary text here"
+
+                        ImageLeftWidget:
+                            # source: "C:\\Users\\cells\\Documents\\Github\\excel-games\\myapps\\wechat\\data\\logo\\man.jfif"
+                            source: 'data/logo/man-2.jfif'
+
+                    TwoLineAvatarListItem:
+                        text: "Garry Calvin"
+                        secondary_text: "Secondary text here"
+
+                        ImageLeftWidget:
+                            # source: "C:\\Users\\cells\\Documents\\Github\\excel-games\\myapps\\wechat\\data\\logo\\man.jfif"
+                            source: 'data/logo/man-2.jfif'
+                    
+                    TwoLineAvatarListItem:
+                        text: "Garry Calvin"
+                        secondary_text: "Secondary text here"
+
+                        ImageLeftWidget:
+                            # source: "C:\\Users\\cells\\Documents\\Github\\excel-games\\myapps\\wechat\\data\\logo\\man.jfif"
+                            source: 'data/logo/man-2.jfif'
+        MDBottomNavigationItem:
+            name: "contacts"
+            icon: 'account-details'
+
+            MDLabel:
+                text: 'Contacts'
+
+        MDBottomNavigationItem:
+            name: "discover"
+            icon: 'compass'
+
+            MDLabel:
+                text: 'Discover'
+
+        MDBottomNavigationItem:
+            name: "me"
+            icon: 'account'
+
+            MDLabel:
+                text: 'Me'
+

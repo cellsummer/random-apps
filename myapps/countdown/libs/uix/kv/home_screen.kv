@@ -1,0 +1,34 @@
+#: import BTNavOne libs.uix.baseclass.btnav_one.BTNavOne
+#: import BTNavTwo libs.uix.baseclass.btnav_two.BTNavTwo
+#: import BTNavThree libs.uix.baseclass.btnav_three.BTNavThree
+
+<HomeScreen>
+    
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+            title: "Countdown 321"
+            left_action_items: [['menu', lambda x: root.login()]]
+            right_action_items: [["stop-circle-outline", lambda x: root.reset()], ['refresh', lambda x: root.refresh()], ['power', lambda x: app.stop()]]
+            id: 'tool_bar'
+
+        MDBottomNavigation:
+
+            BTNavOne:
+                name: "one"
+                text: "Easy"
+                icon: "panda"
+                id: 'board_easy'
+
+            BTNavTwo:
+                name: "two"
+                text: "Hard"
+                icon: "google-downasaur"
+                id: 'board_hard'
+
+            BTNavThree:
+                name: "three"
+                text: "Leaderboard"
+                icon: "medal"
+                id: 'leaderboard'

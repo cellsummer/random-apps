@@ -1,0 +1,66 @@
+#:kivy 2.0.0
+
+MainBox:
+
+<MainBox>:
+
+    orientation: 'vertical'
+    # spacing: '15dp'
+    
+    
+    BannerLabel:
+        id: banner
+        markup: True
+        # title: self.title_string
+        left_action_items: [["menu", lambda x: app.callback()]]
+        
+        # text: 'Sudoku'
+        # size_hint: 1, 0.05
+        # BannerLabel:
+        # font_family: 'JetBrains Mono'
+        # halign: 'center'
+        # valign: 'middle'
+        # theme_text_color: 'Primary'
+        
+        
+            
+
+    GridLayoutBoard: 
+        padding: ('10dp','10dp','10dp','10dp')
+        id: grid
+        rows: 3
+        cols: 3
+        spacing: ("5dp", "5dp")
+        # md_bg_color: app.theme_cls.primary_light
+
+    ButtonsLayout: 
+        orientation: 'horizontal'
+        spacing: '10dp'
+        size_hint: 1, 0.1
+        padding: ('10dp','0dp','10dp','10dp')
+        # md_bg_color: app.theme_cls.primary_light
+        # padding: 0.1, 0.1
+        MDRaisedButton:
+            text: 'Daily Challenge'
+            size_hint: 0.25, 1
+            on_press: root.daily()
+        MDRaisedButton:
+            text: 'New'
+            size_hint: 0.25, 1
+            on_press: root.new_board()
+        MDRaisedButton:
+            text: 'Submit'
+            size_hint: 0.25, 1
+            on_press: root.check_board()
+        MDRaisedButton:
+            text: 'Hint'
+            size_hint: 0.25, 1
+            on_press: root.get_hint()
+        MDRaisedButton:
+            markup: True
+            text: 'Exit'
+            size_hint: 0.25, 1
+            on_press: app.stop()
+
+
+        

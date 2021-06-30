@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "c:\Users\cells\Documents\Github\excel-games\myapps\countdown\main.py", line 30, in <module>
+    countdown().run()
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\app.py", line 950, in run
+    runTouchApp()
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\base.py", line 582, in runTouchApp
+    EventLoop.mainloop()
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\base.py", line 347, in mainloop
+    self.idle()
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\base.py", line 387, in idle
+    Clock.tick()
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\clock.py", line 733, in tick
+    self.post_idle(ts, self.idle())
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\clock.py", line 776, in post_idle
+    self._process_events()
+  File "kivy\_clock.pyx", line 616, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 645, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\animation.py", line 353, in _update
+    self.stop(widget)
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\animation.py", line 218, in stop
+    self.dispatch('on_complete', widget)
+  File "kivy\_event.pyx", line 705, in kivy._event.EventDispatcher.dispatch
+  File "kivy\_event.pyx", line 1248, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1172, in kivy._event.EventObservers._dispatch
+  File "C:\Users\cells\Documents\Github\excel-games\venv\lib\site-packages\kivy\uix\screenmanager.py", line 419, in _on_complete
+    self.screen_in.dispatch('on_enter')
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "c:\Users\cells\Documents\Github\excel-games\myapps\countdown\libs\uix\baseclass\btnav_three.py", line 36, in on_enter
+    standings[0].secondary_text = leaderboard["hard"]["results"][2]
+  File "kivy\properties.pyx", line 498, in kivy.properties.Property.__set__
+  File "kivy\properties.pyx", line 542, in kivy.properties.Property.set
+  File "kivy\properties.pyx", line 533, in kivy.properties.Property.set
+  File "kivy\properties.pyx", line 699, in kivy.properties.StringProperty.check
+ValueError: TwoLineIconListItem.secondary_text accept only str

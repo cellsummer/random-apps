@@ -1,0 +1,97 @@
+Root:
+    id: screen_manager
+    ListScreen:
+        id: list
+    CardScreen:
+        id: card
+
+<ListScreen>:
+    NavigationLayout:
+
+        ScreenManager:
+
+            Screen:
+
+                BoxLayout:
+                    orientation: 'vertical'
+
+                    MDToolbar:
+                        id: list_toolbar
+                        title: "犯罪"
+                        elevation: 10
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("open")]]
+
+                    ScrollView:
+                        MovieList:
+                            id: movie_list 
+
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            ScrollView:
+                TypeList:
+                    id: type_list
+
+<MovieTypeItem>:
+    font_style: 'H6'
+    IconLeftWidget:
+
+<CardScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            id: card_toolbar
+            title: "Movie Details"
+            left_action_items: [['arrow-left', lambda x: root.go_back()],]
+            font_style: "Body2"
+        MDCard:
+            id: card_content
+            orientation: "vertical"
+            padding: "8dp"
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+            # MDLabel:
+            #     id: card_title
+            #     text: "Title"
+            #     font_style: "Body2"
+            #     theme_text_color: "Primary"
+            #     size_hint_y: None
+            #     height: self.texture_size[1]
+
+            # MDSeparator:
+            #     height: "1dp"
+
+            AsyncImage:
+                id: card_post
+                keep_ratio: False
+                allow_stretch: True
+                size_hint_y: 0.6
+            MDLabel:
+                text: "Region"
+                size_hint_y: 0.05
+            MDLabel:
+                id: card_region
+                text: "Region: US"
+                font_style: "Body2"
+                size_hint: (1, 0.1)
+            
+            MDSeparator:
+                height: '1dp'
+            
+            MDLabel:
+                size_hint_y: 0.05
+                text: 'Cast'
+            ScrollView:
+                size_hint_y: 0.3
+                MDLabel:
+                    id: card_actors
+                    text: "Actors"
+                    font_style: "Body2"
+                    size_hint_y: None
+                    size: self.texture_size
+
+<MovieItem>:
+    AsyncImageLeftWidget:
+        keep_ratio: False
+        allow_stretch: True
+    LabelLeftWidget:
